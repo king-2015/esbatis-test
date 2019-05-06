@@ -13,7 +13,9 @@ import org.springframework.core.io.Resource;
 import java.util.List;
 
 /**
- * @author jinzhong.zhang
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/6 15:58
  */
 public class MapperFactoryBean implements FactoryBean<MapperFactory>, InitializingBean {
 

@@ -3,7 +3,9 @@ package com.xiaoya.infra.esbatis.utils;
 import java.lang.reflect.Field;
 
 /**
- * @author jinzhong.zhang
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/6 15:58
  */
 public final class BeanUtils {
 

@@ -1,7 +1,9 @@
 package com.xiaoya.infra.esbatis.client;
 
 /**
- * @author jinzhong.zhang
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/6 15:53
  */
 public final class HttpRequest {
 

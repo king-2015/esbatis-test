@@ -25,14 +25,14 @@
         </property>
         <property name="executorFilters">
             <list>
-                <bean class="com.xiaoya.infra.esbatis.test.TimeSpanFilter" />
+                <bean class="com.xiaoya.infra.esbatis.filter.TimeSpanFilter" />
             </list>
         </property>
     </bean>
 
     <bean id="scannerConfigurer" class="com.xiaoya.infra.esbatis.spring.MapperScannerConfigurer">
         <property name="mapperFactoryBeanId" value="mapperFactory" />
-        <property name="basePackage" value="com.xiaoya.infra.esbatis.test" />
+        <property name="basePackage" value="com.xiaoya.infra.esbatis" />
         <property name="annotationClass" value="org.springframework.stereotype.Repository" />
     </bean>
 </beans>

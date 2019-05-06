@@ -15,7 +15,9 @@ import java.util.Arrays;
 import java.util.Set;
 
 /**
- * @author jinzhong.zhang
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/6 15:58
  */
 public class ClassPathMapperScanner extends ClassPathBeanDefinitionScanner {
 

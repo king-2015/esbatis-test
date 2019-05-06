@@ -1,7 +1,9 @@
 package com.xiaoya.infra.esbatis.handler;
 
 /**
- * @author jinzhong.zhang
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/6 15:55
  */
 public class HandlerException extends RuntimeException {
 

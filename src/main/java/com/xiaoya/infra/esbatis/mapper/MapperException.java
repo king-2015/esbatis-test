@@ -1,7 +1,9 @@
 package com.xiaoya.infra.esbatis.mapper;
 
 /**
- * @author jinzhong.zhang
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/6 15:55
  */
 public class MapperException extends RuntimeException {
     private static final long serialVersionUID = -176685891441325943L;

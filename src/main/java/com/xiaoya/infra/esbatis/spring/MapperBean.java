@@ -4,7 +4,9 @@ import com.xiaoya.infra.esbatis.mapper.MapperFactory;
 import org.springframework.beans.factory.FactoryBean;
 
 /**
- * @author jinzhong.zhang
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/6 15:58
  */
 public class MapperBean<T> implements FactoryBean<T> {
 

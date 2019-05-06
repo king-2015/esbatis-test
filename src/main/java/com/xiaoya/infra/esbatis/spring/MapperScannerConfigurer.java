@@ -14,7 +14,9 @@ import java.lang.annotation.Annotation;
 import static org.springframework.util.Assert.notNull;
 
 /**
- * @author jinzhong.zhang
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/6 15:58
  */
 public class MapperScannerConfigurer implements BeanDefinitionRegistryPostProcessor, InitializingBean, ApplicationContextAware {
 

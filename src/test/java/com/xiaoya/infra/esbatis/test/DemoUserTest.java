@@ -11,7 +11,7 @@ public class DemoUserTest {
 
     @Test
     public void test() {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring-test.xml");
 
         DemoUserDao demoUserDao = applicationContext.getBean(DemoUserDao.class);
         DemoUser demoUser = new DemoUser();
@@ -34,7 +34,7 @@ public class DemoUserTest {
 
     @Test
     public void test2() {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring-test.xml");
         DemoUserDao demoUserDao = applicationContext.getBean(DemoUserDao.class);
         for (int i=0; i<5; i++){
             try {
@@ -47,14 +47,14 @@ public class DemoUserTest {
 
     @Test
     public void test3() {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring-test.xml");
         DemoUserDao demoUserDao = applicationContext.getBean(DemoUserDao.class);
         demoUserDao.insertPolygon();
     }
 
     @Test
     public void test4() {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring-test.xml");
         DemoUserDao demoUserDao = applicationContext.getBean(DemoUserDao.class);
 
         DemoUser demoUser = new DemoUser();

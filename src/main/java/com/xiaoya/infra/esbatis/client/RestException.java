@@ -1,7 +1,9 @@
 package com.xiaoya.infra.esbatis.client;
 
 /**
- * @author jinzhong.zhang
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/6 15:54
  */
 public class RestException extends RuntimeException {
 

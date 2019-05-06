@@ -7,7 +7,9 @@ import com.xiaoya.infra.esbatis.utils.XmlNodeUtils;
 import org.w3c.dom.Node;
 
 /**
- * @author jinzhong.zhang
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/6 15:57
  */
 public class XmlStatementParser {
 

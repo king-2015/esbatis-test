@@ -5,6 +5,11 @@ import com.xiaoya.infra.esbatis.mapper.CommandType;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * @Description:
+ * @Author: zhuzhongji
+ * @Date: 2019/5/6 15:54
+ */
 public class FilterContext {
 
     private String statement;
