@@ -10,7 +10,7 @@
 
 ## 1. Mapper file
     <?xml version="1.0" encoding="UTF-8" ?>
-    <mapper namespace="com.github.esbatis.test.DemoDao">
+    <mapper namespace="DemoDao">
     <index id="index" method="put" url="demo/demo/${demo.id}">
         {
             "id" : ${demo.id},
@@ -134,11 +134,11 @@
         </property>
     </bean>
 
-    <bean id="restClient" class="com.github.esbatis.client.RestClient">
+    <bean id="restClient" class="RestClient">
         <constructor-arg name="hosts" value="${es.hosts}" />
     </bean>
 
-    <bean id="mapperFactory" class="com.github.esbatis.spring.MapperFactoryBean">
+    <bean id="mapperFactory" class="MapperFactoryBean">
         <property name="restClient" ref="restClient" />
         <property name="mapperLocations" >
             <list>
@@ -147,12 +147,12 @@
         </property>
         <property name="executorFilters">
             <list>
-                <bean class="com.github.esbatis.test.TimeSpanFilter" />
+                <bean class="TimeSpanFilter" />
             </list>
         </property>
     </bean>
 
-    <bean id="scannerConfigurer" class="com.github.esbatis.spring.MapperScannerConfigurer">
+    <bean id="scannerConfigurer" class="MapperScannerConfigurer">
         <property name="mapperFactoryBeanId" value="mapperFactory" />
         <property name="basePackage" value="com.github.esbatis.test" />
         <property name="annotationClass" value="org.springframework.stereotype.Repository" />
