@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mapper namespace="com.github.esbatis.test.DemoDao">
+    <index id="index" method="put" url="demo/demo/${demo.id}">
+        {
+            "id" : ${demo.id},
+            "age" : ${demo.age},
+            "date" : "${demo.date}"
+        }
+    </index>
+
+    <search id="findDemo" method="post" url="/demo/demo/_search?pretty=true ">
+        {
+            "query": {
+                "bool": {
+                    "must": [
+                        {
+                            "term": {
+                                "id": "${id}"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    </search>
+
+    <update id="update" method="post" url="/demo/demo/1/_update">
+        {
+            "doc":{
+            "id" : ["4", "2"]
+            }
+        }
+    </update>
+
+    <bulk id="bulk" method="post" url="_bulk">
+        { "index" : { "_index" : "demo", "_type" : "demo", "_id" : "AV5cARtspYdDC3WQaBdK1" } }
+        { "id" : [1] }
+        { "delete" : { "_index" : "demo", "_type" : "demo", "_id" : "AV5cARtspYdDC3WQaBdK" } }
+    </bulk>
+
+    <mget id="mget" method="post" url="_mget">
+    {
+    "docs" : [
+        {
+        "_index" : "demo",
+        "_type" : "demo",
+        "_id" : "60"
+        }
+        ]
+    }
+    </mget>
+
+    <update_by_query id="updateByQuery" method="post" url="demo/demo/_update_by_query">
+        {
+        "query": {
+        "match": {
+        "message": "some message"
+        }
+        }
+        }
+    </update_by_query>
+
+    <index id="insertPolygon" method="put" url="/demo/demo/1?pretty=true ">
+        {
+            "name" : "sh",
+            "location" : {
+                "type" : "polygon",
+                "coordinates" : [[
+                [4.88330,52.38617],
+                [4.87463,52.37254],
+                [4.87875,52.36369],
+                [4.88939,52.35850],
+                [4.89840,52.35755],
+                [4.91909,52.36217],
+                [4.92656,52.36594],
+                [4.93368,52.36615],
+                [4.93342,52.37275],
+                [4.92690,52.37632],
+                [4.88330,52.38617]
+                ]]
+            }
+        }
+    </index>
+
+    <search id="avg" method="post" url="/demo/demo1/_search?pretty=true">
+        {
+        "aggs" : {
+        <if test="demo.id==1">
+            "avg_grade" : { "avg" : { "field" : "${demo.id}" } }
+        </if>
+        }
+        }
+    </search>
+</mapper>
